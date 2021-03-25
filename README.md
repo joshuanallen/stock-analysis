@@ -75,10 +75,11 @@ The limitations of this data set can limit our ability to make recommendations o
 ## Results
 
 ### Green stock recommendations
-*****Insert color chart 2 year results
-Based on the stock performance analysis above, our recommendations for the following stocks are:
+
+Based on the stock performance analysis above in Table 1.3, our recommendations for the following stocks are:
 
 Recommendations for investment (Top performers):
+
 1. [ENPH](https://www.morningstar.com/stocks/XNAS/ENPH/quote)
 2. [RUN](https://www.morningstar.com/stocks/xnas/run/quote)
 3. [SEDG](https://www.morningstar.com/stocks/xnas/sedg/quote)
@@ -104,6 +105,7 @@ Stock recommendations are limited to 2017-2018 performance, therefore it is advi
 The refactored VBA script signifcantly increases the efficiency of the analysis. The results for the refactored code are shown in the pictures below:
 
 The 2017 analysis runtime improved from 0.5 seconds(s) to 0.125s after script refactoring.
+
 **Original VBA script timer for 2017 data:**
 
 ![Original VBA script timer for 2017 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/Original_VBA_script_2017_timer.png)
@@ -114,6 +116,7 @@ The 2017 analysis runtime improved from 0.5 seconds(s) to 0.125s after script re
 
 
 The 2018 analysis runtime improved from 0.496 seconds(s) to 0.132s after script refactoring.
+
 **Original VBA script timer for 2018 data:**
 
 ![Original VBA script timer for 2018 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/Original_VBA_script_2018_timer.png)
