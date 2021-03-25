@@ -12,15 +12,18 @@ The purpose of this project is to analyze a set of predetermined "green" stock t
 Tables 1.1 and 1.2 below show stock return performance for all 12 stocks. 2017 performance was better than 2018 as 11 out of the 12 stocks posted positive returns as opposed to 2 out of 12 stocks. 
 
 **Table 1.1 Green Stock Performance (2017)**
+
 ![2017 Green Stock Performance](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/VBA_Challenge_2017_results.png)
 
 **Table 1.2 Green Stock Performance (2018)**
+
 ![2018 Green Stock Performance](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/VBA_Challenge_2018_results.png)
 
 
 Table 1.3 below shows the return performance for the 2 year timeframe (2017-2018). Of the 12 stocks present in the data, all had significant trade volume, 8 had a positive return, 2 had a neutral return, and 3 had a negative return over the 2 year timeframe.
 
 **Table 1.3 2-Year Green Stock Overall Performance (2017-2018)**
+
 ![2-Year Overall Green Stock Performance (2017-2018)](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/All_stocks_2yr_performance.png)
 
 The positive performing stocks are:
@@ -82,6 +85,7 @@ Recommendations for investment (Top performers):
 4. [VSLR](https://www.marketbeat.com/stocks/NYSE/VSLR/)
 
 Recommendations for further research:
+
 5. [FSLR](https://www.morningstar.com/stocks/xnas/fslr/quote)
 6. [DQ](https://www.morningstar.com/stocks/xnys/dq/quote)
 7. [CSIQ](https://www.morningstar.com/stocks/xnas/csiq/quote)
@@ -89,6 +93,7 @@ Recommendations for further research:
 9. [HASI](https://www.morningstar.com/stocks/xnys/hasi/quote)
 
 Recommendations against investments (Worst performers):
+
 10. [TERP](https://www.morningstar.com/stocks/chix/terp/quote)
 11. [SPWR](https://www.morningstar.com/stocks/xnas/spwr/quote)
 12. [JKS](https://www.morningstar.com/stocks/xnys/jks/quote)
@@ -100,14 +105,21 @@ The refactored VBA script signifcantly increases the efficiency of the analysis.
 
 The 2017 analysis runtime improved from 0.5 seconds(s) to 0.125s after script refactoring.
 **Original VBA script timer for 2017 data:**
+
 ![Original VBA script timer for 2017 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/Original_VBA_script_2017_timer.png)
+
 **Refactored VBA script timer for 2017 data:**
+
 ![Refactored VBA script timer for 2017 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/VBA_Challenge_2017_timer.png)
+
 
 The 2018 analysis runtime improved from 0.496 seconds(s) to 0.132s after script refactoring.
 **Original VBA script timer for 2018 data:**
+
 ![Original VBA script timer for 2018 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/Original_VBA_script_2018_timer.png)
+
 **Refactored VBA script timer for 2018 data:**
+
 ![Refactored VBA script timer for 2018 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/VBA_Challenge_2018_timer.png)
 
 ## Summary of VBA script refactoring
