@@ -9,19 +9,19 @@ The purpose of this project is to analyze a set of predetermined "green" stock t
 ## Analysis and challenges
 
 ### Green stock analysis
-Tables 1.1 and 1.2 below shows stock return performance for all 12 stocks in 2017 was better than 2018 as 11 out of the 12 stocks posted positive returns as opposed to 2 out of 12 stocks in 2018. 
-*****Insert 2017 and 2018 tables here
-Table 1.1 Green Stock Performance (2017)
+Tables 1.1 and 1.2 below show stock return performance for all 12 stocks. 2017 performance was better than 2018 as 11 out of the 12 stocks posted positive returns as opposed to 2 out of 12 stocks. 
 
-Table 1.2 Green Stock Performance (2018)
+**Table 1.1 Green Stock Performance (2017)**
+![2017 Green Stock Performance](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/VBA_Challenge_2017_results.png)
 
+**Table 1.2 Green Stock Performance (2018)**
+![2018 Green Stock Performance](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/VBA_Challenge_2018_results.png)
 
 
 Table 1.3 below shows the return performance for the 2 year timeframe (2017-2018). Of the 12 stocks present in the data, all had significant trade volume, 8 had a positive return, 2 had a neutral return, and 3 had a negative return over the 2 year timeframe.
 
-*****Insert 2 year return table
-Table 1.3 2-Year Green Stock Overall Performance (2017-2018)
-
+**Table 1.3 2-Year Green Stock Overall Performance (2017-2018)**
+![2-Year Overall Green Stock Performance (2017-2018)](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/All_stocks_2yr_performance.png)
 
 The positive performing stocks are:
 - [ENPH (Enphase Energy, Inc)](https://www.morningstar.com/stocks/XNAS/ENPH/quote)
@@ -45,25 +45,24 @@ The negative performing stocks are:
 One of the challenges I ran into refactoring the VBA script was setting the tickerIndex variable to increase only when all of that tickers info had been looped through. Without the conditional if/then statement the counter was going too high within the loop. The error was resulting from not checking to ensure the previous "Ticker" row no longer matched the next row. This was resulting in the index counter increasing too fast within the for loop and would end up with an "out of range error." 
 
 My initial fix to run a nested for loop to search for each ticker in ticker array was ineffcient. 
-***** Fix code callouts
-    'For tickerIndex = 0 To 11
+
+    For tickerIndex = 0 To 11
         'for loop through all rows
-    Next tickerIndex'
+    Next tickerIndex
 
 
 The final refactoring elimnated the nested for loop need by adding a conditional statement to only increase the tickerIndex variable once it identified a new ticker name was identified.
-***** Fix code callouts
-    'If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
-            
-        tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-    End If'
+
+    If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+    End If
 
 An additional issue I had was generating a populated pre-populated array using a for loop. The fix is using a simple short for loop to loop through the array's index and populate it with zeros.
-***** Fix code callouts
-    'Populates tickerVolumes array with zeros
+
+    Populates tickerVolumes array with zeros
     For k = 0 To 11
         tickerVolumes(k) = 0
-    Next k'
+    Next k
 
 Limitations of this script are limited to the sheets they are tied to as we manually identifed the various different tickers to be used. Additionally, the data worksheets have to be arranged in such a way that each ticker is in a "block' of cells organized by thte name of the ticker to identify the starting and ending prices for the ticker.
 
@@ -99,7 +98,17 @@ Stock recommendations are limited to 2017-2018 performance, therefore it is advi
 ### Refactoring results
 The refactored VBA script signifcantly increases the efficiency of the analysis. The results for the refactored code are shown in the pictures below:
 
-*****Insert run time images
+The 2017 analysis runtime improved from 0.5 seconds(s) to 0.125s after script refactoring.
+**Original VBA script timer for 2017 data:**
+![Original VBA script timer for 2017 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/Original_VBA_script_2017_timer.png)
+**Refactored VBA script timer for 2017 data:**
+![Refactored VBA script timer for 2017 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/VBA_Challenge_2017_timer.png)
+
+The 2018 analysis runtime improved from 0.496 seconds(s) to 0.132s after script refactoring.
+**Original VBA script timer for 2018 data:**
+![Original VBA script timer for 2018 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/Original_VBA_script_2018_timer.png)
+**Refactored VBA script timer for 2018 data:**
+![Refactored VBA script timer for 2018 data](https://github.com/joshuanallen/stock-analysis/blob/c0af656872fe23da68a4d3c580af77d1664fb68a/Resources/VBA_Challenge_2018_timer.png)
 
 ## Summary of VBA script refactoring
 
